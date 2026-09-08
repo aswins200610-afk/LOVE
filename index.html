@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+
+  <title>For Priya ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --wine: #7a102b;
+      --wine-bright: #a51d43;
+      --wine-soft: #541021;
+      --black: #000000;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-height: 100%;
+      background: #000000;
+      color: var(--wine);
+      font-family: Georgia, "Times New Roman", serif;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-height: 100vh;
+    }
+
+    /* =========================
+       FLOATING I LOVE YOU TEXT
+       ========================= */
+
+    #floating-love {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .love {
+      position: absolute;
+      color: var(--wine-soft);
+      font-family: Georgia, serif;
+      font-weight: bold;
+      white-space: nowrap;
+      opacity: 0;
+      animation: floatAround linear infinite;
+      user-select: none;
+    }
+
+    @keyframes floatAround {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0) rotate(-5deg);
+      }
+
+      15% {
+        opacity: 0.75;
+      }
+
+      50% {
+        transform: translate3d(25px, -25px, 0) rotate(5deg);
+        opacity: 0.85;
+      }
+
+      85% {
+        opacity: 0.65;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translate3d(-20px, -80px, 0) rotate(-5deg);
+      }
+    }
+
+    /* =========================
+       MAIN SCREEN
+       ========================= */
+
+    .screen {
+      position: relative;
+      z-index: 5;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 25px;
+    }
+
+    .box {
+      width: min(92%, 600px);
+      text-align: center;
+      padding: 40px 25px;
+
+      border: 1px solid var(--wine-soft);
+
+      background: rgba(0, 0, 0, 0.94);
+
+      box-shadow:
+        0 0 30px rgba(122, 16, 43, 0.12),
+        inset 0 0 30px rgba(122, 16, 43, 0.04);
+
+      border-radius: 18px;
+    }
+
+    .small-text {
+      font-size: 0.9rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--wine-soft);
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2rem, 9vw, 4.5rem);
+      color: var(--wine-bright);
+      line-height: 1.1;
+    }
+
+    h2 {
+      margin: 0 0 15px;
+      font-size: clamp(1.6rem, 6vw, 2.5rem);
+      color: var(--wine-bright);
+    }
+
+    p {
+      line-height: 1.7;
+      font-size: 1.05rem;
+      color: var(--wine);
+    }
+
+    .question {
+      margin: 25px 0 30px;
+      font-size: clamp(1.3rem, 5vw, 1.8rem);
+      line-height: 1.4;
+      color: var(--wine-bright);
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      min-width: 135px;
+      min-height: 52px;
+      padding: 14px 22px;
+
+      border-radius: 999px;
+      border: 1px solid var(--wine);
+
+      background: transparent;
+      color: var(--wine-bright);
+
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      font-weight: bold;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    button:hover,
+    button:active {
+      background: var(--wine);
+      color: #000;
+
+      transform: scale(1.05);
+
+      box-shadow:
+        0 0 20px rgba(122, 16, 43, 0.35);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .message {
+      margin-top: 25px;
+      color: var(--wine);
+      min-height: 30px;
+      font-size: 1rem;
+    }
+
+    /* =========================
+       UNLOCKED MAIN PAGE
+       ========================= */
+
+    #main-page {
+      position: relative;
+      z-index: 5;
+      min-height: 100vh;
+      padding: 30px 20px 70px;
+      text-align: center;
+    }
+
+    .main-content {
+      max-width: 750px;
+      margin: 0 auto;
+      padding-top: 10vh;
+    }
+
+    .giant-heart {
+      font-size: clamp(3rem, 15vw, 7rem);
+      color: var(--wine);
+
+      animation: pulse 2s ease-in-out infinite;
+
+      text-shadow:
+        0 0 30px rgba(122, 16, 43, 0.25);
+    }
+
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.08);
+      }
+    }
+
+    .main-title {
+      font-size: clamp(2.5rem, 12vw, 6rem);
+      color: var(--wine-bright);
+      margin: 20px 0;
+    }
+
+    /* =========================
+       ANNIVERSARY MESSAGE
+       ========================= */
+
+    .anniversary {
+      margin-top: 35px;
+      margin-bottom: 20px;
+
+      font-size: clamp(1.5rem, 6vw, 2.5rem);
+
+      line-height: 1.35;
+
+      color: var(--wine-bright);
+    }
+
+    .date {
+      margin-top: 12px;
+
+      font-size: 1rem;
+
+      letter-spacing: 4px;
+
+      color: var(--wine-soft);
+
+      text-transform: uppercase;
+    }
+
+    .love-message {
+      border: 1px solid var(--wine-soft);
+
+      border-radius: 20px;
+
+      padding: 30px 25px;
+
+      margin-top: 35px;
+
+      background: rgba(10, 0, 3, 0.8);
+
+      box-shadow:
+        0 0 35px rgba(122, 16, 43, 0.1);
+    }
+
+    .love-message p {
+      font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+
+    .final-message {
+      margin-top: 30px;
+
+      font-size: clamp(1.1rem, 4vw, 1.35rem);
+
+      line-height: 1.7;
+
+      color: var(--wine-bright);
+    }
+
+    .signature {
+      margin-top: 25px;
+
+      font-size: 1.1rem;
+
+      color: var(--wine-bright);
+
+      letter-spacing: 2px;
+    }
+
+    .tiny {
+      margin-top: 45px;
+
+      font-size: 0.75rem;
+
+      color: var(--wine-soft);
+    }
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 500px) {
+
+      .screen {
+        padding: 15px;
+      }
+
+      .box {
+        padding: 35px 18px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      button {
+        width: 100%;
+      }
+
+      .main-content {
+        padding-top: 8vh;
+      }
+
+      .anniversary {
+        font-size: 1.65rem;
+      }
+    }
+
+    /* =========================
+       REDUCE MOTION
+       ========================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =====================================
+       FLOATING LOVE MESSAGES
+       ===================================== -->
+
+  <div id="floating-love"></div>
+
+
+  <!-- =====================================
+       QUESTION 1
+       ===================================== -->
+
+  <section id="question1" class="screen">
+
+    <div class="box">
+
+      <div class="small-text">
+        A very important question
+      </div>
+
+      <h1>
+        Priya ❤️
+      </h1>
+
+      <div class="question">
+        Are you Aswin's girlfriend?
+      </div>
+
+      <div class="buttons">
+
+        <button onclick="yesGirlfriend()">
+          YES ❤️
+        </button>
+
+        <button onclick="noGirlfriend()">
+          NO
+        </button>
+
+      </div>
+
+      <div id="message1" class="message"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       QUESTION 2
+       ===================================== -->
+
+  <section id="question2" class="screen hidden">
+
+    <div class="box">
+
+      <div class="small-text">
+        Okay... one more thing
+      </div>
+
+      <h2>
+        Priya 👀
+      </h2>
+
+      <div class="question">
+        Do you love Aswin?
+      </div>
+
+      <div class="buttons">
+
+        <button onclick="loveAswin()">
+          I LOVE YOU ❤️
+        </button>
+
+        <button onclick="hateAswin()">
+          I HATE YOU 🖤
+        </button>
+
+      </div>
+
+      <div id="message2" class="message"></div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       MAIN UNLOCKED PAGE
+       ===================================== -->
+
+  <section id="main-page" class="hidden">
+
+    <div class="main-content">
+
+      <div class="giant-heart">
+        ♥
+      </div>
+
+      <div class="small-text">
+        ACCESS GRANTED
+      </div>
+
+      <h1 class="main-title">
+        I LOVE YOU
+      </h1>
+
+
+      <!-- ANNIVERSARY HEADLINE -->
+
+      <div class="anniversary">
+        Just a Few More Days Until Our Fourth Anniversary ❤️
+      </div>
+
+      <div class="date">
+        September 27, 2026
+      </div>
+
+
+      <!-- MAIN MESSAGE -->
+
+      <div class="love-message">
+
+        <h2>
+          Priya ❤️
+        </h2>
+
+        <p>
+          Four years. So many memories.
+        </p>
+
+        <p>
+          And one beautiful story that is still being written. ❤️
+        </p>
+
+
+        <!-- FINAL MESSAGE -->
+
+        <div class="final-message">
+
+          Four years with you, and I'd choose you all over again. ❤️
+
+        </div>
+
+        <div class="signature">
+          — Aswin ❤️
+        </div>
+
+      </div>
+
+
+      <div class="tiny">
+        This little corner of the internet is just for you.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       JAVASCRIPT
+       ===================================== -->
+
+  <script>
+
+    /* =====================================
+       FLOATING "I LOVE YOU" TEXT
+       ===================================== */
+
+    const floatingContainer =
+      document.getElementById("floating-love");
+
+
+    const loveTexts = [
+
+      "I LOVE YOU",
+
+      "I LOVE YOU ❤️",
+
+      "I LOVE YOU",
+
+      "LOVE YOU PRIYA",
+
+      "I LOVE YOU",
+
+      "❤️ I LOVE YOU",
+
+      "I LOVE YOU",
+
+      "PRIYA ❤️",
+
+      "I LOVE YOU",
+
+      "ALWAYS ❤️",
+
+      "I LOVE YOU",
+
+      "I LOVE YOU ❤️"
+
+    ];
+
+
+    function createLoveText() {
+
+      const text =
+        document.createElement("div");
+
+
+      text.className = "love";
+
+
+      text.textContent =
+        loveTexts[
+          Math.floor(
+            Math.random() * loveTexts.length
+          )
+        ];
+
+
+      /*
+       * Keep the messages mainly
+       * around the edges.
+       */
+
+      const edge =
+        Math.floor(Math.random() * 4);
+
+
+      let left;
+      let top;
+
+
+      if (edge === 0) {
+
+        // TOP
+
+        left =
+          Math.random() * 90;
+
+        top =
+          Math.random() * 15;
+
+      }
+
+      else if (edge === 1) {
+
+        // RIGHT
+
+        left =
+          75 + Math.random() * 20;
+
+        top =
+          15 + Math.random() * 70;
+
+      }
+
+      else if (edge === 2) {
+
+        // BOTTOM
+
+        left =
+          Math.random() * 90;
+
+        top =
+          85 + Math.random() * 10;
+
+      }
+
+      else {
+
+        // LEFT
+
+        left =
+          Math.random() * 15;
+
+        top =
+          15 + Math.random() * 70;
+
+      }
+
+
+      text.style.left =
+        left + "%";
+
+
+      text.style.top =
+        top + "%";
+
+
+      text.style.fontSize =
+        (12 + Math.random() * 13) + "px";
+
+
+      text.style.animationDuration =
+        (6 + Math.random() * 8) + "s";
+
+
+      text.style.animationDelay =
+        (Math.random() * 4) + "s";
+
+
+      floatingContainer.appendChild(text);
+
+
+      setTimeout(() => {
+
+        text.remove();
+
+      }, 16000);
+
+    }
+
+
+    /* Initial floating messages */
+
+    for (
+      let i = 0;
+      i < 18;
+      i++
+    ) {
+
+      setTimeout(
+        createLoveText,
+        i * 300
+      );
+
+    }
+
+
+    /* Continuously create messages */
+
+    setInterval(
+      createLoveText,
+      650
+    );
+
+
+    /* =====================================
+       QUESTION 1
+       ===================================== */
+
+    function yesGirlfriend() {
+
+      document
+        .getElementById("question1")
+        .classList
+        .add("hidden");
+
+
+      document
+        .getElementById("question2")
+        .classList
+        .remove("hidden");
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+    }
+
+
+    function noGirlfriend() {
+
+      const message =
+        document.getElementById("message1");
+
+
+      message.textContent =
+        "Hmm... I think you clicked the wrong answer 😭 Try again.";
+
+    }
+
+
+    /* =====================================
+       QUESTION 2
+       ===================================== */
+
+    function loveAswin() {
+
+      document
+        .getElementById("question2")
+        .classList
+        .add("hidden");
+
+
+      document
+        .getElementById("main-page")
+        .classList
+        .remove("hidden");
+
+
+      window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+      });
+
+
+      /*
+       * Extra burst of messages
+       * when the website unlocks.
+       */
+
+      for (
+        let i = 0;
+        i < 25;
+        i++
+      ) {
+
+        setTimeout(
+          createLoveText,
+          i * 120
+        );
+
+      }
+
+    }
+
+
+    function hateAswin() {
+
+      const message =
+        document.getElementById("message2");
+
+
+      message.textContent =
+        "Nice try, Priya 😂❤️ That answer doesn't unlock the secret.";
+
+    }
+
+  </script>
+
+</body>
+</html>
